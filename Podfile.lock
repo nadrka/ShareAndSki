@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.7.3)
+  - FlagPhoneNumber (0.7.2):
+    - libPhoneNumber-iOS
+  - FloatingPanel (1.4.0)
+  - libPhoneNumber-iOS (0.9.13)
+  - ObjectMapper (3.3.0)
+  - SnapKit (4.0.0)
+  - SwiftyBeaver (1.6.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - FlagPhoneNumber
+  - FloatingPanel
+  - ObjectMapper
+  - SnapKit (~> 4.0.0)
+  - SwiftyBeaver
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FlagPhoneNumber
+    - FloatingPanel
+    - libPhoneNumber-iOS
+    - ObjectMapper
+    - SnapKit
+    - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  FlagPhoneNumber: 86194d414c7e3b2f38c16136c4f8a5d34e3ee8b7
+  FloatingPanel: 1449e7c4b9994e394f2de685b2ad6dd93da06333
+  libPhoneNumber-iOS: e444379ac18bbfbdefad571da735b2cd7e096caa
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
+
+PODFILE CHECKSUM: dda314aeabfea13cb6d15c7a0de31d9a4e83dcee
+
+COCOAPODS: 1.5.3
