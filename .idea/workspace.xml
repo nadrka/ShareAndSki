@@ -193,6 +193,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="ShareAndSki" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -240,12 +241,12 @@
       <workItem from="1553957722029" duration="4812000" />
       <workItem from="1554060609602" duration="3804000" />
       <workItem from="1554146104050" duration="1124000" />
-      <workItem from="1554148393278" duration="774000" />
+      <workItem from="1554148393278" duration="1067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21179000" />
+    <option name="totallyTimeSpent" value="21472000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="6" />
