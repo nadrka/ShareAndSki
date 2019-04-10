@@ -12,4 +12,5 @@ target 'ShareAndSki' do
   pod 'ObjectMapper'
   pod 'FlagPhoneNumber'
   pod 'FloatingPanel'
+  pod 'PinCodeTextField'
 end

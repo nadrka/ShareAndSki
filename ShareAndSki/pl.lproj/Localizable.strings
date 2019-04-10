@@ -5,3 +5,15 @@
   Created by karol.nadratowaski on 26/03/2019.
   Copyright © 2019 Apolej Developer. All rights reserved.
 */
+
+
+"GROUPS" = "Groups";
+"MAP" = "Map";
+"FRIENDS" = "Friends";
+"DONE" = "Done";
+"PHONE_NUMBER" = "Phone number";
+"YOUR_PHONE_NUMBER" = "Your phone number";
+"DONE" = "Done";
+"FINISH" = "Finish";
+"EDIT_PROFILE" = "Edit profile";
+"NAME_MAX_25_CHAR" = "Name (max 25 characters)";
