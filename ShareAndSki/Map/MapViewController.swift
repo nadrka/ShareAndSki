@@ -4,12 +4,14 @@ import FloatingPanel
 class MapViewController: UIViewController {
     private var mainView: MapView!
     private var fpc: FloatingPanelController!
+    let viewModel: MapViewModel
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init() {
+    init(mapViewModel: MapViewModel) {
+        self.viewModel = mapViewModel
         super.init(nibName: nil, bundle: nil)
         setupView()
         setupFloatingPanel()
@@ -24,10 +26,11 @@ class MapViewController: UIViewController {
     private func setupFloatingPanel() {
         fpc = FloatingPanelController()
         fpc.delegate = self
-        let contentVC = UIViewController()
-        contentVC.view.backgroundColor = .lightGray
-        fpc.set(contentViewController: contentVC)
+        let sharingFriendsViewModel = SharingFriendsViewModel()
+        let sharingFriendsViewController = SharingFriendsViewController(viewModel: sharingFriendsViewModel)
+        fpc.set(contentViewController: sharingFriendsViewController)
         fpc.addPanel(toParent: self)
+        fpc.track(scrollView: sharingFriendsViewController.getTableView())
         fpc.show(animated: true)
     }
 

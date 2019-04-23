@@ -17,18 +17,17 @@ class MainFlowController: FlowController {
         onBoardingFlow = OnboardingFlowController(rootNavigationController: rootNavigationController)
         onBoardingFlow.onUserAlreadyLoggedIn = {
             [weak self] in
-            self?.showMapScreen()
+            self?.startMapFlow()
         }
         onBoardingFlow.onUserLoggedIn = {
             [weak self] in
-            self?.showMapScreen()
+            self?.startMapFlow()
         }
         onBoardingFlow.startFlow()
     }
 
-    private func showMapScreen() {
-        let mainTabBarController = MainTabBarController()
-        rootNavigationController.setNavigationBarHidden(true, animated: true)
-        rootNavigationController.pushViewController(mainTabBarController, animated: true)
+    private func startMapFlow() {
+        mapFlow = MapFlowController(rootNavigationController: rootNavigationController)
+        mapFlow.startFlow()
     }
 }

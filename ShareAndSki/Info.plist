@@ -43,5 +43,7 @@
 	<string>Share and wants to access your location to share it with your friends</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Share and wants to access your location to share it with your friends</string>
+	<key>NSContactsUsageDescription</key>
+	<string>App users your contacts</string>
 </dict>
 </plist>

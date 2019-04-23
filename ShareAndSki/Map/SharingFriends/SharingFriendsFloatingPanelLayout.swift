@@ -8,14 +8,14 @@ class SharingFriendsFloatingPanelLayout: FloatingPanelLayout {
     }
 
     public var supportedPositions: Set<FloatingPanelPosition> {
-        return [.full, .tip]
+        return [.full, .half,.tip]
     }
 
     public func insetFor(position: FloatingPanelPosition) -> CGFloat? {
         switch position {
         case .full: return 16.0 // A top inset from safe area
         case .half: return 216.0 // A bottom inset from the safe area
-        case .tip: return 44.0 // A bottom inset from the safe area
+        case .tip: return 70.0 // A bottom inset from the safe area
         default: return nil // Or `case .hidden: return nil`
         }
     }
