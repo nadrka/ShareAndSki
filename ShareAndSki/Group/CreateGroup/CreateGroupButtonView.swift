@@ -4,7 +4,7 @@ import SnapKit
 class CreateGroupButtonView: UIView {
     private var plusImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "phone")
+        imageView.image = UIImage(named: "add-group")
         return imageView
     }()
 
@@ -38,7 +38,7 @@ class CreateGroupButtonView: UIView {
     private func applyConstraints() {
         plusImageView.snp.makeConstraints {
             make in
-            make.left.equalToSuperview().inset(15.sketchWidth)
+            make.left.equalToSuperview().inset(20.sketchWidth)
             make.height.equalTo(30.sketchHeight)
             make.width.equalTo(30.sketchHeight)
             make.centerY.equalToSuperview()

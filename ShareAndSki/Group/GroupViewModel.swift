@@ -1,3 +1,6 @@
 import Foundation
 
-class GroupViewModel {}
+class GroupViewModel {
+    var onCreateButtonTapped: (()->())? = nil
+
+}

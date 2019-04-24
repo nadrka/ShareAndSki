@@ -6,6 +6,9 @@ class MainTabBarController: UITabBarController {
     private(set) var mapViewModel: MapViewModel!
     private(set) var friendsViewModel: FriendsViewModel!
     private(set) var groupsViewModel: GroupViewModel!
+    private var mapNavigationController: UINavigationController!
+    private var friendNavigationController: UINavigationController!
+    private(set) var groupNavigationController: UINavigationController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,10 +20,15 @@ class MainTabBarController: UITabBarController {
         let mapViewController = setupMapViewController()
         let friendsViewController = setupFriendsViewController()
         let groupsViewController = setupGroupsViewController()
+
+        mapNavigationController = createNavigationController(title: "MAP".localized, rootViewController: mapViewController, image: UIImage(named: "map"))
+        groupNavigationController = createNavigationController(title: "GROUPS".localized, rootViewController: groupsViewController, image: UIImage(named: "group"))
+        friendNavigationController = createNavigationController(title: "FRIENDS".localized, rootViewController: friendsViewController, image: UIImage(named: "snowboarder"))
+
         viewControllers = [
-            createNavigationController(title: "MAP".localized, rootViewController: mapViewController, image: UIImage(named: "downloads")),
-            createNavigationController(title: "FRIENDS".localized, rootViewController: friendsViewController, image: UIImage(named: "downloads")),
-            createNavigationController(title: "GROUPS".localized, rootViewController: groupsViewController, image: UIImage(named: "search")),
+            mapNavigationController,
+            friendNavigationController,
+            groupNavigationController
         ]
     }
 

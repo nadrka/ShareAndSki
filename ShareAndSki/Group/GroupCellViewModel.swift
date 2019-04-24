@@ -30,7 +30,12 @@ class GroupCellViewModel: FriendCellViewModel {
     }
 
     var isPickerHidden: Bool {
-        return false
+        switch cellUsage {
+        case .friendsPicker:
+            return false
+        default:
+            return true
+        }
     }
 
     var initials: String {
@@ -41,6 +46,10 @@ class GroupCellViewModel: FriendCellViewModel {
 
     var name: String {
         return group.name
+    }
+
+    var distance: String {
+        return "1.7 km"
     }
 
 

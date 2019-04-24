@@ -52,7 +52,7 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.reuseId, for: indexPath) as! FriendTableViewCell
         let friend = viewModel.friends[indexPath.row]
-        let cellViewModel = DefaultFriendCellViewModel(cellUsage: .friendsSharingLocation, friend: friend)
+        let cellViewModel = DefaultFriendCellViewModel(cellUsage: .friendsToShareLocation, friend: friend)
         cell.setup(cellViewModel)
         return cell
     }

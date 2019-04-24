@@ -35,6 +35,15 @@ class MapFlowController: FlowController {
     }
 
     private func bindGroupController() {
+        mainTabBarController.groupsViewModel.onCreateButtonTapped = {
+            [weak self] in
+            self?.showCreateGroupScreen()
+        }
+    }
 
+    private func showCreateGroupScreen() {
+        let createGroupViewModel = CreateGroupViewModel()
+        let createGroupVC = CreateGroupViewController(viewModel: createGroupViewModel)
+        mainTabBarController.groupNavigationController.pushViewController(createGroupVC, animated: true)
     }
 }

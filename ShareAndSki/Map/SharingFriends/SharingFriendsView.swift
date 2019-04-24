@@ -52,7 +52,7 @@ class SharingFriendsView: UIView {
         tableView.snp.makeConstraints{
             make in
             make.width.equalToSuperview()
-            make.top.equalTo(friendThatShareLocationLabel.snp.bottom).inset(-15.sketchHeight)
+            make.top.equalTo(friendThatShareLocationLabel.snp.bottom).inset(-5.sketchHeight)
             make.bottom.equalToSuperview()
         }
     }

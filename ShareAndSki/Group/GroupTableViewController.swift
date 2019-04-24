@@ -40,7 +40,7 @@ class GroupTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.reuseId, for: indexPath) as! FriendTableViewCell
         let group = groups[indexPath.row]
-        let cellViewModel = GroupCellViewModel(cellUsage: .friendsSharingLocation, group: group)
+        let cellViewModel = GroupCellViewModel(cellUsage: .friendsToShareLocation, group: group)
         cell.setup(cellViewModel)
         return cell
     }
@@ -53,6 +53,7 @@ class GroupTableViewController: UITableViewController {
     }
 
     @objc func onCreateButtonTapped() {
+        viewModel.onCreateButtonTapped?()
         log.debug("Create group button tapped!")
     }
 
