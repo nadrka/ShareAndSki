@@ -4,6 +4,7 @@ import SnapKit
 
 class MapView: UIView, CLLocationManagerDelegate {
     private var mapView: MKMapView!
+    private var viewModel: MapViewModel
     private var shouldTrackUserLocation = true
     private var locationManager = CLLocationManager()
     private var regionInMeters: Double = 1000
@@ -12,7 +13,8 @@ class MapView: UIView, CLLocationManagerDelegate {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init() {
+    init(viewModel: MapViewModel) {
+        self.viewModel = viewModel
         super.init(frame: .zero)
         setupMainView()
         applyConstraints()
@@ -21,8 +23,8 @@ class MapView: UIView, CLLocationManagerDelegate {
     private func setupMainView() {
         setupMapView()
         checkLocationServices()
+        setupViewModel()
     }
-
 
     func setupMapView() {
         mapView = MKMapView()
@@ -82,6 +84,11 @@ class MapView: UIView, CLLocationManagerDelegate {
         }
     }
 
+    private func setupViewModel() {
+        viewModel.setupMapView(mapView)
+        viewModel.createMarkersForFriends(users: viewModel.users)
+    }
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {
             return
@@ -108,7 +115,11 @@ extension MapView: MKMapViewDelegate {
     }
 
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        return nil
+        guard let friendAnnotation = annotation as? FriendAnnotation else {
+            return nil
+        }
+        let friendAnnotationView = FriendAnnotationView(annotation: annotation, reuseIdentifier: "", user: friendAnnotation.user)
+        return friendAnnotationView
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

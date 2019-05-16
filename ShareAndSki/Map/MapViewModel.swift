@@ -3,9 +3,17 @@ import MapKit
 
 class MapViewModel {
     private var mapView: MKMapView!
-    private var locationUpdater = LocationUpdaterService()
+    private var locationUpdater = LocationUpdaterService.sharedInstance
     var timerForUpdatingPosition = Timer()
     var timerForFriendsPosition = Timer()
+    let users = [
+        User(nickname: "Dżasta", phoneNumber: "123213", longitude: 18.653242, latitude: 54.349822),
+        User(nickname: "Braniak", phoneNumber: "123123", longitude: 18.653394, latitude: 54.348850),
+        User(nickname: "Julian", phoneNumber: "12312", longitude: 18.653216, latitude:54.348628)
+
+    ]
+    
+    let friendsAnnotations = [FriendAnnotation]()
 
     func setupMapView(_ mapView: MKMapView) {
         self.mapView = mapView
@@ -31,11 +39,17 @@ class MapViewModel {
         locationUpdater.checkForLocationFromFriends {
             users in
             self.mapView.removeAnnotations(self.mapView.annotations)
-            users.forEach {
-                //todo: create marker on map for each user
-                $0
-            }
+            self.createMarkersForFriends(users: users)
         }
+    }
+
+    func createMarkersForFriends(users: [User]) {
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        users.forEach {
+            let friendMarker = FriendAnnotation(user: $0)
+            mapView.addAnnotation(friendMarker)
+        }
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
 
 

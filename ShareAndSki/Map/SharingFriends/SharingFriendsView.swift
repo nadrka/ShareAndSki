@@ -23,6 +23,7 @@ class SharingFriendsView: UIView {
         self.viewModel = viewModel
         super.init(frame: .zero)
         setupView()
+        bindViewModel()
         applyConstraints()
     }
 
@@ -40,6 +41,12 @@ class SharingFriendsView: UIView {
         tableView.register(FriendTableViewCell.self, forCellReuseIdentifier: FriendTableViewCell.reuseId)
         tableView.tableFooterView = UIView()
         addSubview(tableView)
+    }
+
+    private func bindViewModel() {
+        viewModel.onListUpdate = {
+            self.tableView.reloadData()
+        }
     }
 
     private func applyConstraints() {

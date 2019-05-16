@@ -14,7 +14,12 @@ class FriendAnnotationView: MKAnnotationView {
         self.isDraggable = false
         self.isEnabled = true
         self.isHighlighted = true
+        createAnnotationView()
     }
 
 
+    private func createAnnotationView() {
+        canShowCallout = true
+        image = UIImage(named: "ski-marker")
+    }
 }
