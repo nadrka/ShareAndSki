@@ -18,7 +18,7 @@ class PhoneNumberViewController: UIViewController {
     }
 
     @objc func doneTapped() {
-        viewModel.onDoneButtonTapped?()
+        mainView.doneButtonTapped()
     }
 
     private func setupView() {

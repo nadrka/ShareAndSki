@@ -19,10 +19,10 @@ protocol FriendCellViewModel {
 
 class DefaultFriendCellViewModel: FriendCellViewModel {
     private(set) var isSelected: Bool = false
-    private(set) var friend: Friend
+    private(set) var friend: User
     private var cellUsage: FriendCellUsage
 
-    init(cellUsage: FriendCellUsage, friend: Friend) {
+    init(cellUsage: FriendCellUsage, friend: User) {
         self.cellUsage = cellUsage
         self.friend = friend
     }
@@ -60,13 +60,13 @@ class DefaultFriendCellViewModel: FriendCellViewModel {
     }
 
     var initials: String {
-        let name = friend.name
+        let name = friend.nameFromContactList
         let initials = InitialCreator.getInitials(from: name)
         return initials
     }
 
     var name: String {
-        return friend.name
+        return friend.nameFromContactList
     }
 
     var distance: String {

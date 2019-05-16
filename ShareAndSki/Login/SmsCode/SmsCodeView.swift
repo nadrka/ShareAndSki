@@ -38,12 +38,12 @@ class SmsCodeView: UIView {
     }
 
     private func applyConstraints() {
-        descriptionSectionView.snp.makeConstraints{
+        descriptionSectionView.snp.makeConstraints {
             make in
             make.top.equalTo(self.snp.topMargin).inset(10.sketchHeight)
             make.width.equalToSuperview()
         }
-        pinCodeTextField.snp.makeConstraints{
+        pinCodeTextField.snp.makeConstraints {
             make in
             make.centerX.equalToSuperview()
             make.top.equalTo(descriptionSectionView.snp.bottom).inset(-45.sketchHeight)
@@ -56,7 +56,9 @@ class SmsCodeView: UIView {
 extension SmsCodeView: PinCodeTextFieldDelegate {
     public func textFieldDidEndEditing(_ textField: PinCodeTextField) {
         log.debug("End editing")
-        viewModel.onDoneButtonTapped?()
+        if let code = textField.text {
+            viewModel.validate(code: code)
+        }
     }
 }
 

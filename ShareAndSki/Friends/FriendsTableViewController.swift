@@ -1,9 +1,11 @@
 import UIKit
+import JGProgressHUD
 
 class FriendsTableViewController: UITableViewController {
 
     let searchController = UISearchController(searchResultsController: nil)
     var viewModel: FriendsViewModel
+    let hud = JGProgressHUD(style: .dark)
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -30,6 +32,26 @@ class FriendsTableViewController: UITableViewController {
             [weak self] in
             self?.tableView.reloadData()
         }
+
+        viewModel.onLoading = {
+            isLoading in
+            if isLoading {
+                self.showLoader()
+            } else {
+                self.hideLoader()
+            }
+        }
+
+
+    }
+
+    private func showLoader() {
+        hud.textLabel.text = "Loading"
+        hud.show(in: self.view)
+    }
+
+    private func hideLoader() {
+        hud.dismiss(animated: true)
     }
 
     private func setupTableView() {
@@ -46,12 +68,12 @@ class FriendsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.friends.count
+        return viewModel.friendsFromApp.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.reuseId, for: indexPath) as! FriendTableViewCell
-        let friend = viewModel.friends[indexPath.row]
+        let friend = viewModel.friendsFromApp[indexPath.row]
         let cellViewModel = DefaultFriendCellViewModel(cellUsage: .friendsToShareLocation, friend: friend)
         cell.setup(cellViewModel)
         return cell

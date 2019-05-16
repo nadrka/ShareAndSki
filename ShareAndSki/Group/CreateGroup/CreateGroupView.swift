@@ -69,10 +69,10 @@ extension CreateGroupView: UITableViewDelegate, UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.reuseId, for: indexPath) as! FriendTableViewCell
-        let friend = viewModel.getFriend(for: indexPath.row)
-        let cellViewModel = DefaultFriendCellViewModel(cellUsage: .friendsPicker, friend: friend)
-        viewModel.cellViewModels.append(cellViewModel)
-        cell.setup(cellViewModel)
+//        let friend = viewModel.getFriend(for: indexPath.row)
+//        let cellViewModel = DefaultFriendCellViewModel(cellUsage: .friendsPicker, friend: friend)
+//        viewModel.cellViewModels.append(cellViewModel)
+//        cell.setup(cellViewModel)
         return cell
     }
 }

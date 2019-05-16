@@ -3,7 +3,7 @@ import UIKit
 class OnboardingFlowController: FlowController {
 
     private weak var rootNavigationController: UINavigationController?
-    private var isLoggedIn: Bool = true
+    private var isLoggedIn: Bool = false
     var onUserAlreadyLoggedIn: (()->())? = nil
     var onUserLoggedIn: (()->())? = nil
 
@@ -23,25 +23,27 @@ class OnboardingFlowController: FlowController {
         let phoneNumberViewModel = PhoneNumberViewModel()
         let phoneNumberViewController = PhoneNumberViewController(viewModel: phoneNumberViewModel)
         phoneNumberViewModel.onDoneButtonTapped = {
-            [weak self] in
-            self?.showSmsCodeScreen()
+            [weak self] phoneNumber in
+            self?.showSmsCodeScreen(phoneNumber: phoneNumber)
 
         }
         rootNavigationController?.viewControllers = [phoneNumberViewController]
     }
 
-    private func showSmsCodeScreen() {
+    private func showSmsCodeScreen(phoneNumber: String) {
         let smsCodeViewModel = SmsCodeViewModel()
+        smsCodeViewModel.phoneNumber = phoneNumber
         let smsCodeViewController = SmsCodeViewController(viewModel: smsCodeViewModel)
         smsCodeViewModel.onDoneButtonTapped = {
-            [weak self] in
-            self?.showUserDetailsScreen()
+            [weak self] phoneNumber in
+            self?.showUserDetailsScreen(phoneNumber: phoneNumber)
         }
         rootNavigationController?.pushViewController(smsCodeViewController, animated: true)
     }
 
-    private func showUserDetailsScreen() {
+    private func showUserDetailsScreen(phoneNumber: String) {
         let userDetailsViewModel = UserDetailsViewModel()
+        userDetailsViewModel.phoneNumber = phoneNumber
         let userDetailsViewController = UserDetailsViewController(viewModel: userDetailsViewModel)
         userDetailsViewModel.onFinishButtonTapped = {
             [weak self] in

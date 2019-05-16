@@ -1,8 +1,8 @@
 import Foundation
 
 class SharingFriendsViewModel {
-    var friends = [Friend(name: "Gustaw Ohler", phoneNumbers: []), Friend(name: "Łukasz Pawlicki", phoneNumbers: [])]
-    func getFriendThatSharesLocation(with index: Int) -> Friend {
+    var friends = [User]()
+    func getFriendThatSharesLocation(with index: Int) -> User {
         return friends[index]
     }
 

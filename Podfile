@@ -13,4 +13,5 @@ target 'ShareAndSki' do
   pod 'FlagPhoneNumber'
   pod 'FloatingPanel'
   pod 'PinCodeTextField'
+  pod 'JGProgressHUD'
 end

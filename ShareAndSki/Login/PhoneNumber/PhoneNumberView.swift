@@ -37,7 +37,8 @@ class PhoneNumberView: UIView {
     }
 
     @objc func doneButtonTapped() {
-        viewModel.onDoneButtonTapped?()
+        let number = phoneNumberTextField.text
+        viewModel.done(phoneNumber: number ?? "")
     }
 
     private func addGestureRecognizerToView() {

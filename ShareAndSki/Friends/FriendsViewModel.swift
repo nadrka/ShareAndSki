@@ -3,7 +3,9 @@ import ContactsUI
 
 class FriendsViewModel {
     var friends = [Friend]()
+    var friendsFromApp = [User]()
     var onListUpdated: (() -> ())? = nil
+    var onLoading: ((Bool)->())? = nil
 
     init() {
 
@@ -11,10 +13,10 @@ class FriendsViewModel {
 
     func checkForUserFromContacts() {
         friends = phoneContactsMapped()
-        fetchUserFromContacts(friends: friends)
     }
 
     private func phoneContactsMapped() -> [Friend] {
+        onLoading?(true)
         let contactStore = CNContactStore()
         var friends = [Friend]()
         let keys = [
@@ -37,12 +39,38 @@ class FriendsViewModel {
 
             }
         } catch {
+            onLoading?(false)
             log.error("Read phone contacts failed. Probably user didn't provide the access to contacts")
         }
+        onLoading?(false)
         return friends
     }
 
-    private func fetchUserFromContacts(friends: [Friend]) {
-        onListUpdated?()
+    private func fetchUserFromContacts() {
+        getUsers(completionHandler: {
+            users in
+            users.forEach {
+                self.checkIfUserMatchOurContacts(user: $0)
+            }
+            self.onListUpdated?()
+        })
     }
+
+    private func getUsers(completionHandler: @escaping (([User]) -> ())) {
+
+    }
+
+    private func checkIfUserMatchOurContacts(user: User) {
+        let friend = friends.first(where: {
+            $0.phoneNumbers.contains(user.phoneNumber)
+        })
+
+        if let matchingContact = friend {
+            user.nameFromContactList = matchingContact.name
+            friendsFromApp.append(user)
+        }
+
+    }
+
+
 }
