@@ -3,7 +3,6 @@ import UIKit
 class OnboardingFlowController: FlowController {
 
     private weak var rootNavigationController: UINavigationController?
-    private var isLoggedIn: Bool = true
     var onUserAlreadyLoggedIn: (()->())? = nil
     var onUserLoggedIn: (()->())? = nil
 
@@ -12,11 +11,16 @@ class OnboardingFlowController: FlowController {
     }
 
     func startFlow() {
-        if isLoggedIn {
+        if shouldProcessLoginFlow() {
             onUserAlreadyLoggedIn?()
         } else {
             showWelcomeScreen()
         }
+    }
+
+    func shouldProcessLoginFlow() -> Bool {
+        let userRepository = UserRepository()
+        return userRepository.userWithToken != nil
     }
 
     private func showWelcomeScreen() {

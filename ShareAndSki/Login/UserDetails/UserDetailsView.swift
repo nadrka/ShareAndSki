@@ -42,7 +42,8 @@ class UserDetailsView: UIView {
     }
 
     @objc func finishButtonTapped() {
-        viewModel.onFinishButtonTapped?()
+        let userName = nameTextField.text ?? ""
+        viewModel.validate(userName: userName)
     }
 
     private func addGestureRecognizerToView() {

@@ -3,6 +3,7 @@ import Foundation
 class SharingFriendsViewModel {
     var friends = [User]()
     var onListUpdate: (()->())? = nil
+    var onChosenFriend: ((User)->())? = nil
     func getFriendThatSharesLocation(with index: Int) -> User {
         return friends[index]
     }

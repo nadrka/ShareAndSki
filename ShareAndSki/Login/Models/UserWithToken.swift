@@ -9,6 +9,11 @@ struct UserWithToken: Mappable {
 
     }
 
+    init(user: User, token: String) {
+        self.user = user
+        self.token = token
+    }
+
     mutating func mapping(map: Map) {
         user <- map["user"]
         token <- map["token"]

@@ -10,7 +10,6 @@ class MapViewModel {
         User(nickname: "Dżasta", phoneNumber: "123213", longitude: 18.653242, latitude: 54.349822),
         User(nickname: "Braniak", phoneNumber: "123123", longitude: 18.653394, latitude: 54.348850),
         User(nickname: "Julian", phoneNumber: "12312", longitude: 18.653216, latitude:54.348628)
-
     ]
     
     let friendsAnnotations = [FriendAnnotation]()
@@ -52,5 +51,9 @@ class MapViewModel {
         mapView.showAnnotations(mapView.annotations, animated: true)
     }
 
+
+    func showFriendOnMap(user: User) {
+        //todo: move map to a friend location
+    }
 
 }

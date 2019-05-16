@@ -2,7 +2,8 @@ import Foundation
 import ObjectMapper
 
 class Token: Mappable {
-    private var token: String = ""
+    private(set) var token: String = ""
+
     required init?(map: Map) {
 
     }

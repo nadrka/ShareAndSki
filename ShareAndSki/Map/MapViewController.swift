@@ -27,6 +27,10 @@ class MapViewController: UIViewController {
         fpc = FloatingPanelController()
         fpc.delegate = self
         let sharingFriendsViewModel = SharingFriendsViewModel()
+        sharingFriendsViewModel.onChosenFriend = {
+            user in
+            self.viewModel.showFriendOnMap(user: user)
+        }
         let sharingFriendsViewController = SharingFriendsViewController(viewModel: sharingFriendsViewModel)
         fpc.set(contentViewController: sharingFriendsViewController)
         fpc.addPanel(toParent: self)

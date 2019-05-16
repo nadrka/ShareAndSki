@@ -21,6 +21,7 @@
 		8C7AA13743B8BF5DFE9FCE86 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAFEA507E4CAB8385D04E /* LoginService.swift */; };
 		8C7AA1602A62FCBBD13EF4BF /* FriendAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AA95F409697B25FF94DF0 /* FriendAnnotation.swift */; };
 		8C7AA178F0B1DAD1295DE3DD /* UpdateLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AA8EBB069F0F68FEA2AB9 /* UpdateLocationRepository.swift */; };
+		8C7AA1A2BE8E250621394700 /* FriendId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AA9E9611CAB4FE481BD17 /* FriendId.swift */; };
 		8C7AA1B5386A58DF1B639E36 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAE3B33BC886B5CBCE62B /* CreateGroupViewController.swift */; };
 		8C7AA1E1EBD36C55C313B383 /* SmsCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AA315333A8F66A681C43A /* SmsCodeViewController.swift */; };
 		8C7AA1F94F58070E0F62AB1B /* LocationUpdaterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAF25CA02C282C2F98EAD /* LocationUpdaterService.swift */; };
@@ -134,6 +135,7 @@
 		8C7AA987BB4B14B9F1F4E208 /* GroupCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCellViewModel.swift; sourceTree = "<group>"; };
 		8C7AA9B780017F0774D97D39 /* SmsCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmsCodeView.swift; sourceTree = "<group>"; };
 		8C7AA9C5F64548318BB1E612 /* FriendAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendAnnotationView.swift; sourceTree = "<group>"; };
+		8C7AA9E9611CAB4FE481BD17 /* FriendId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendId.swift; sourceTree = "<group>"; };
 		8C7AAA0A02FDEF2567B70310 /* UserFileSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFileSaver.swift; sourceTree = "<group>"; };
 		8C7AAA2AD7343BC20E4B0AA1 /* PhoneNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewModel.swift; sourceTree = "<group>"; };
 		8C7AAAC96D269EA687818DEC /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 				8C7AAAD9BD8C62FAAC08993A /* Contact.swift */,
 				8C7AAFA7F2953C5B6BC55FA4 /* User.swift */,
 				8C7AAAC96D269EA687818DEC /* Position.swift */,
+				8C7AA9E9611CAB4FE481BD17 /* FriendId.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				8C7AA1602A62FCBBD13EF4BF /* FriendAnnotation.swift in Sources */,
 				8C7AACC0644BF7FE44B4E618 /* FriendAnnotationView.swift in Sources */,
 				8C7AA068B06997FC4CBE5E8B /* Position.swift in Sources */,
+				8C7AA1A2BE8E250621394700 /* FriendId.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

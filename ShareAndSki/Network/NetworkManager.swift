@@ -20,7 +20,7 @@ fileprivate enum BasicURL: String {
 class NetworkManager {
     static let sharedInstance: NetworkManager = NetworkManager()
 
-    func get<T: Mappable>(endpoint: String, parameters: [String: Any]?, onSuccess: @escaping (T?) -> (), onError: @escaping (String) -> ()) {
+    func get(endpoint: String, parameters: [String: Any]?, onSuccess: @escaping ([String: Any]) -> (), onError: @escaping (String) -> ()) {
         Alamofire.request(endpoint, method: .get, parameters: parameters).validate().responseJSON {
             response in
             switch response.result {
@@ -33,8 +33,7 @@ class NetworkManager {
                     guard let stringDic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
                         return
                     }
-                    let result = Mapper<T>().map(JSON: stringDic)
-                    onSuccess(result)
+                    onSuccess(stringDic)
                 } catch {
                     onError("Decoding Error")
                     return
@@ -46,7 +45,32 @@ class NetworkManager {
         }
     }
 
-    func post<T: Mappable>(endpoint: String, parameters: T, onSuccess: @escaping (String) -> (), onError: @escaping (String) -> ()) {
+    func getArray(endpoint: String, parameters: [String: Any]?, onSuccess: @escaping ([[String: Any]]) -> (), onError: @escaping (String) -> ()) {
+        Alamofire.request(endpoint, method: .get, parameters: parameters).validate().responseJSON {
+            response in
+            switch response.result {
+            case .success:
+                guard let data = response.data else {
+                    onError("Some problem occurred")
+                    return
+                }
+                do {
+                    guard let stringDic = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] else {
+                        return
+                    }
+                    onSuccess(stringDic)
+                } catch {
+                    onError("Decoding Error")
+                    return
+                }
+            case .failure(let error):
+                onError(error.localizedDescription)
+                return
+            }
+        }
+    }
+
+    func post<T: Mappable>(endpoint: String, parameters: T, onSuccess: @escaping ([String: Any]) -> (), onError: @escaping (String) -> ()) {
         let params: Parameters = parameters.toJSON()
         Alamofire.request(endpoint, method: .post, parameters: params).validate().responseJSON {
             response in
@@ -57,12 +81,11 @@ class NetworkManager {
                     return
                 }
                 do {
-                    guard let stringDic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                           else {
+                    guard let stringDic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
                         onError("Some problem occurred")
                         return
                     }
-                    onSuccess("")
+                    onSuccess(stringDic)
                 } catch {
                     onError("Decoding Error")
                     return
@@ -74,7 +97,7 @@ class NetworkManager {
         }
     }
 
-    func put<T:Mappable, G: Mappable>(endpoint: String, parameters: T, onSuccess: @escaping (G) -> (), onError: @escaping (String) -> ()) {
+    func put<T: Mappable>(endpoint: String, parameters: T, onSuccess: @escaping ([String: Any]) -> (), onError: @escaping (String) -> ()) {
         let params: Parameters = parameters.toJSON()
         Alamofire.request(endpoint, method: .put, parameters: params).validate().responseJSON {
             response in
@@ -85,12 +108,11 @@ class NetworkManager {
                     return
                 }
                 do {
-                    guard let stringDic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                          let result = Mapper<G>().map(JSON: stringDic) else {
+                    guard let stringDic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
                         onError("Some problem occurred")
                         return
                     }
-                    onSuccess(result)
+                    onSuccess(stringDic)
                 } catch {
                     onError("Decoding Error")
                     return
@@ -113,6 +135,16 @@ class NetworkManager {
                 return
             }
         }
+    }
+
+    func mapResponse<T: Mappable>(_ response: [String: Any]) -> T? {
+        let result = Mapper<T>().map(JSON: response)
+        return result
+    }
+
+    func mapResponseArray<T: Mappable>(_ response: [[String: Any]]) -> [T]? {
+        let result = Mapper<T>().mapArray(JSONArray: response)
+        return result
     }
 
 }
