@@ -14,6 +14,7 @@
 		8C7AA01BA273A5A187C02A3B /* FriendFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAFB1B9219AA4FCF29068 /* FriendFetcherService.swift */; };
 		8C7AA0365DDEFD8DE4A62955 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AA64F22D35895DB901050 /* UserDetailsViewController.swift */; };
 		8C7AA0687234209E0F34D40D /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAFE213218F7BDD514093 /* PhoneNumberView.swift */; };
+		8C7AA068B06997FC4CBE5E8B /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAAC96D269EA687818DEC /* Position.swift */; };
 		8C7AA0B1835B9454C47CF661 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AA28B0F5B339A9BA195A6 /* String+Localizable.swift */; };
 		8C7AA0E6E8183145CEA36763 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAB74064DC08700EF7019 /* FriendsViewModel.swift */; };
 		8C7AA126DC61FB6C3C369A2A /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7AAD68DB9F1CFA5F211F8D /* UserDetailsView.swift */; };
@@ -135,6 +136,7 @@
 		8C7AA9C5F64548318BB1E612 /* FriendAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendAnnotationView.swift; sourceTree = "<group>"; };
 		8C7AAA0A02FDEF2567B70310 /* UserFileSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFileSaver.swift; sourceTree = "<group>"; };
 		8C7AAA2AD7343BC20E4B0AA1 /* PhoneNumberViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewModel.swift; sourceTree = "<group>"; };
+		8C7AAAC96D269EA687818DEC /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		8C7AAAD9BD8C62FAAC08993A /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		8C7AAB486056B4436A8B659B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C7AAB74064DC08700EF7019 /* FriendsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				8C7AA79BD8FEF7D9AB5217B8 /* Friend.swift */,
 				8C7AAAD9BD8C62FAAC08993A /* Contact.swift */,
 				8C7AAFA7F2953C5B6BC55FA4 /* User.swift */,
+				8C7AAAC96D269EA687818DEC /* Position.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				8C7AA178F0B1DAD1295DE3DD /* UpdateLocationRepository.swift in Sources */,
 				8C7AA1602A62FCBBD13EF4BF /* FriendAnnotation.swift in Sources */,
 				8C7AACC0644BF7FE44B4E618 /* FriendAnnotationView.swift in Sources */,
+				8C7AA068B06997FC4CBE5E8B /* Position.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
