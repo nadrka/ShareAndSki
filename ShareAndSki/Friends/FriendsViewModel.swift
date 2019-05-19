@@ -15,6 +15,7 @@ class FriendsViewModel {
 
     func checkForUserFromContacts() {
         friends = phoneContactsMapped()
+        fetchUserFromContacts()
     }
 
     private func phoneContactsMapped() -> [Friend] {
@@ -34,7 +35,7 @@ class FriendsViewModel {
                 // unfortunately, there is no display name property in CNContact
                 let name = phoneContact.givenName + " " + phoneContact.familyName
                 let phoneNumbers = phoneContact.phoneNumbers.compactMap {
-                    return $0.value.stringValue
+                    return $0.value.stringValue.digits
                 }
                 let friend = Friend(name: name, phoneNumbers: phoneNumbers)
                 friends.append(friend)

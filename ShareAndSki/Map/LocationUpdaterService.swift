@@ -9,7 +9,7 @@ class LocationUpdaterService {
 
     func checkForLocationFromFriends(completionHandler: @escaping ([User]) -> ()) {
         if let id = userRepository.userWithToken?.user.id {
-            let endpoint = String(format: Endpoints.knownUsers.rawValue, arguments: [id])
+            let endpoint = String(format: Endpoints.knownUsers.rawValue, arguments: [String(id)])
             networkManager.getArray(endpoint: Endpoints.getFullUrl(endpoint: endpoint), parameters: nil, onSuccess: {
                         [weak self] response in
                         if let users: [User] = self?.networkManager.mapResponseArray(response) {
@@ -25,8 +25,8 @@ class LocationUpdaterService {
     func sendMyLocationUpdate(latitude: Double, longitude: Double) {
         if let user = userRepository.userWithToken?.user {
             let id = user.id
-            let position = Position(longitude: user.longitude, latitude: user.latitude)
-            let endpoint = String(format: Endpoints.userPosition.rawValue, arguments: [id])
+            let position = Position(longitude: longitude, latitude: latitude)
+            let endpoint = String(format: Endpoints.userPosition.rawValue, arguments: [String(id)])
             NetworkManager.sharedInstance.put(endpoint: Endpoints.getFullUrl(endpoint: endpoint), parameters: position, onSuccess: {
                 [weak self] result in
             }, onError: {

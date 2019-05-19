@@ -86,6 +86,8 @@ class MapView: UIView, CLLocationManagerDelegate {
 
     private func setupViewModel() {
         viewModel.setupMapView(mapView)
+        viewModel.scheduleFriendsLocationTimer()
+        viewModel.scheduleMyLocationTimer()
         viewModel.createMarkersForFriends(users: viewModel.users)
     }
 

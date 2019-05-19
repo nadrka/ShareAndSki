@@ -23,6 +23,7 @@ class UserDetailsViewModel {
                     response in
                     self.user = self.networkManager.mapResponse(response)
                     log.debug("Creating account succes!")
+                    self.authUser()
                 },
                 onError: {
                     error in
@@ -31,12 +32,12 @@ class UserDetailsViewModel {
     }
 
     private func authUser() {
-        let phoneNumber: PhoneNumber = PhoneNumber(number: self.user.phoneNumber)
+        let phoneNumber: PhoneNumber = PhoneNumber(number: self.phoneNumber)
         let endpoint = Endpoints.getFullUrl(endpoint: Endpoints.auth.rawValue)
         log.verbose("Endpoint: " + endpoint)
         networkManager.post(
                 endpoint: endpoint,
-                parameters: user,
+                parameters: phoneNumber,
                 onSuccess: {
                     response in
                     if let token: Token = self.networkManager.mapResponse(response) {

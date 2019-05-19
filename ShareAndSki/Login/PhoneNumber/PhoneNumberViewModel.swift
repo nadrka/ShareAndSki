@@ -4,8 +4,9 @@ class PhoneNumberViewModel {
     var onDoneButtonTapped: ((String) -> ())? = nil
 
     func done(phoneNumber: String) {
-        if phoneNumber.count > 6 {
-            self.onDoneButtonTapped?(phoneNumber)
+        let number = phoneNumber.digits
+        if number.count > 6 {
+            self.onDoneButtonTapped?(number)
         }
     }
 

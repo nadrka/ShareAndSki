@@ -9,9 +9,9 @@ class MapViewModel {
     let users = [
         User(nickname: "Dżasta", phoneNumber: "123213", longitude: 18.653242, latitude: 54.349822),
         User(nickname: "Braniak", phoneNumber: "123123", longitude: 18.653394, latitude: 54.348850),
-        User(nickname: "Julian", phoneNumber: "12312", longitude: 18.653216, latitude:54.348628)
+        User(nickname: "Julian", phoneNumber: "12312", longitude: 18.653216, latitude: 54.348628)
     ]
-    
+
     let friendsAnnotations = [FriendAnnotation]()
 
     func setupMapView(_ mapView: MKMapView) {
@@ -23,11 +23,10 @@ class MapViewModel {
     }
 
     @objc private func updateMyPosition() {
-        if UpdateLocationRepository.sharedInstance.shouldUpdatePosition() {
-            let latitude = mapView.userLocation.coordinate.latitude
-            let longitude = mapView.userLocation.coordinate.longitude
-            locationUpdater.sendMyLocationUpdate(latitude: latitude, longitude: longitude)
-        }
+        let latitude = mapView.userLocation.coordinate.latitude
+        let longitude = mapView.userLocation.coordinate.longitude
+        locationUpdater.sendMyLocationUpdate(latitude: latitude, longitude: longitude)
+
     }
 
     func scheduleFriendsLocationTimer() {
