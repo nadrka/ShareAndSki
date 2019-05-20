@@ -2,16 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf81e80a-62ac-4bfe-a548-f729e2c9f32c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/alarm.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/alarm.imageset/alarm.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/alert.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/alert.imageset/alert@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/alert.imageset/alert@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/alert.imageset/alert@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/cancel.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/cancel.imageset/cancel.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/create-alert.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShareAndSki/Assets.xcassets/create-alert.imageset/create-alert.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareAndSki/Extensions/String+Localizable.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Extensions/String+Localizable.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareAndSki/Friends/FriendsViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Friends/FriendsViewModel.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareAndSki/Friends/Models/User.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Friends/Models/User.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareAndSki.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareAndSki/Flows/OnboardingFlowController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Flows/OnboardingFlowController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShareAndSki/Login/PhoneNumber/PhoneNumberViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Login/PhoneNumber/PhoneNumberViewModel.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsViewModel.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareAndSki/Map/LocationUpdaterService.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Map/LocationUpdaterService.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShareAndSki/Map/MapView.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Map/MapView.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareAndSki/Network/NetworkManager.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ShareAndSki/Network/NetworkManager.swift" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,29 +29,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_51670546-F730-48CF-A5D7-18C451DB944D" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/LocationUpdaterService.swift">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapView.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+            <state relative-caret-position="260">
+              <caret line="111" column="32" lean-forward="true" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache.zip!/ModuleCache/10B61/4.2.1/arm64/iphoneos12.1/Foundation/Foundation.swift">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Cell/FriendTableViewCell.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117960">
-              <caret line="7988" column="11" selection-start-line="7988" selection-start-column="11" selection-end-line="7988" selection-end-column="11" />
+            <state relative-caret-position="334">
+              <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Models/Position.swift">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertAnnotation.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -53,22 +66,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsViewModel.swift">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/Alert.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Network/NetworkManager.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="8" column="21" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -76,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Models/User.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="450">
               <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -86,19 +87,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Repositories/UserRepository.swift">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertAnnotationView.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/FriendsViewModel.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1335">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="214">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -107,10 +99,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShareAndSki/Extensions/String+Localizable.swift">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/LocationMarker/FriendAnnotation.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,11 +113,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+            <state relative-caret-position="111">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/SharingFriends/SharingFriendsViewModel.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -142,6 +158,9 @@
       <find>required init(</find>
       <find>s</find>
       <find>friendsFromApp</find>
+      <find>saveLoggedUserToRepository</find>
+      <find>userRepository</find>
+      <find>U</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,9 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ShareAndSki/Map/SharingFriendsViewModel.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Map/SharingFriends/SharingFriendsViewController.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Friends/FriendTableViewCell.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Group/CreateGroupButtonView.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Info.plist" />
         <option value="$PROJECT_DIR$/ShareAndSki/Flows/MainFlowController.swift" />
@@ -185,29 +201,33 @@
         <option value="$PROJECT_DIR$/ShareAndSki/Map/SharingFriends/SharingFriendsView.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Friends/Models/Position.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Map/SharingFriends/SharingFriendsViewModel.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Login/Models/UserWithToken.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Friends/Models/FriendId.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Login/Models/Token.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Flows/OnboardingFlowController.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsView.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Extensions/String+Localizable.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Login/PhoneNumber/PhoneNumberViewModel.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Friends/FriendsViewModel.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Map/MapView.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Friends/Cell/FriendTableViewCell.swift" />
-        <option value="$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Network/NetworkManager.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Map/LocationUpdaterService.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsViewModel.swift" />
         <option value="$PROJECT_DIR$/ShareAndSki/Friends/Models/User.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Login/PhoneNumber/PhoneNumberViewModel.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Flows/OnboardingFlowController.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Map/Alert.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertAnnotation.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertAnnotationView.swift" />
+        <option value="$PROJECT_DIR$/ShareAndSki/Map/MapView.swift" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="160" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="805" />
+    <option name="width" value="80" />
+    <option name="height" value="22" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -216,7 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,6 +343,13 @@
               <item name="ShareAndSki" type="1d218c8b:XcodeProjectNode" />
               <item name="ShareAndSki" type="fcab9f18:XcodeViewNode" />
               <item name="Map" type="fcab9f18:XcodeViewNode" />
+              <item name="AlertMarker" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ShareAndSki" type="1d218c8b:XcodeProjectNode" />
+              <item name="ShareAndSki" type="fcab9f18:XcodeViewNode" />
+              <item name="Map" type="fcab9f18:XcodeViewNode" />
               <item name="LocationMarker" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
@@ -354,6 +381,12 @@
               <item name="" type="efc3779f:XcodeRootNode" />
               <item name="ShareAndSki" type="1d218c8b:XcodeProjectNode" />
               <item name="ShareAndSki" type="fcab9f18:XcodeViewNode" />
+              <item name="Utils" type="fcab9f18:XcodeViewNode" />
+            </path>
+            <path>
+              <item name="" type="efc3779f:XcodeRootNode" />
+              <item name="ShareAndSki" type="1d218c8b:XcodeProjectNode" />
+              <item name="ShareAndSki" type="fcab9f18:XcodeViewNode" />
               <item name="Localizable.strings" type="fcab9f18:XcodeViewNode" />
             </path>
             <path>
@@ -365,7 +398,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -496,7 +529,8 @@
       <workItem from="1558012223926" duration="21335000" />
       <workItem from="1558078018906" duration="227000" />
       <workItem from="1558092653974" duration="6070000" />
-      <workItem from="1558277940243" duration="597000" />
+      <workItem from="1558277940243" duration="838000" />
+      <workItem from="1558346296118" duration="4630000" />
     </task>
     <task id="LOCAL-00001" summary="WIP">
       <created>1556040889117</created>
@@ -541,7 +575,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109457000" />
+    <option name="totallyTimeSpent" value="114328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,22 +590,22 @@
     <frame x="0" y="23" width="1440" height="805" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21459228" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2911302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34502104" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46563816" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39691445" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32953367" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32746115" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32678822" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3253857" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32398316" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -579,22 +613,22 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16080937" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2911302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32746115" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997195" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46563816" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39691445" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32953367" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32953367" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32678822" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32746115" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32398316" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -691,42 +725,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Flows/Karol.swift" />
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Utils/RoundedButton.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/NetworkServices/GroupService.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/Resources/module_cache.zip!/ModuleCache/10B61/4.2.1/arm64/iphoneos12.1/Swift/Misc.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4875">
-          <caret line="325" column="17" selection-start-line="325" selection-start-column="17" selection-end-line="325" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/MainTabViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-end-line="60" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Flows/MainFlowController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareAndSki/Flows/MapFlowController.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -820,16 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Group/CreateGroup/CreateGroupView.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/SmsCode/SmsCodeViewModel.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -841,26 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="19" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/LocationMarker/FriendAnnotationView.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/LocationMarker/FriendAnnotation.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -884,29 +852,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/SharingFriends/SharingFriendsViewModel.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/Models/UserWithToken.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -928,13 +879,6 @@
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Flows/OnboardingFlowController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -985,40 +929,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapView.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShareAndSki/Repositories/UpdateLocationRepository.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/PhoneNumber/PhoneNumberViewModel.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Cell/FriendTableViewCell.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,17 +960,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsViewModel.swift">
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Extensions/String+Localizable.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Models/User.swift">
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/FriendsViewModel.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="635">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
@@ -1065,44 +979,176 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareAndSki/Repositories/UserRepository.swift">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Utils/Colors.swift">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/FriendsViewModel.swift">
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/UserDetails/UserDetailsViewModel.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Extensions/String+Localizable.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="501">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ShareAndSki/Network/NetworkManager.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="8" column="21" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="21" />
+        <state relative-caret-position="144">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="41" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Login/PhoneNumber/PhoneNumberViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="60" column="58" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Flows/OnboardingFlowController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Group/CreateGroup/CreateGroupView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/AlertMarker.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/LocationMarker/FriendAnnotationView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="29" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/LocationMarker/FriendAnnotation.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertCalloutView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/Alert.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Models/User.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Friends/Cell/FriendTableViewCell.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertAnnotation.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/SharingFriends/SharingFriendsViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapViewModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/AlertMarker/AlertAnnotationView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShareAndSki/Map/MapView.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="111" column="32" lean-forward="true" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -6,11 +6,14 @@ class MapViewModel {
     private var locationUpdater = LocationUpdaterService.sharedInstance
     var timerForUpdatingPosition = Timer()
     var timerForFriendsPosition = Timer()
+    var isMapInCreatingAlertMode = false
     let users = [
         User(nickname: "Dżasta", phoneNumber: "123213", longitude: 18.653242, latitude: 54.349822),
         User(nickname: "Braniak", phoneNumber: "123123", longitude: 18.653394, latitude: 54.348850),
         User(nickname: "Julian", phoneNumber: "12312", longitude: 18.653216, latitude: 54.348628)
     ]
+
+    var alerts = [Alert]()
 
     let friendsAnnotations = [FriendAnnotation]()
 
@@ -55,4 +58,22 @@ class MapViewModel {
         //todo: move map to a friend location
     }
 
+    func toggleButton() {
+        isMapInCreatingAlertMode = !isMapInCreatingAlertMode
+    }
+
+    func createAlert(locationCoordinate: CLLocationCoordinate2D) {
+        let alert = Alert(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
+        alerts.append(alert)
+        let alertAnnotation = AlertAnnotation(alert: alert)
+        mapView.addAnnotation(alertAnnotation)
+    }
+
+    private func checkIfSomeFriendAreNearToAlert() {
+
+    }
+
+    private func notifyThatSomeFriendIsNearToAlert() {
+
+    }
 }

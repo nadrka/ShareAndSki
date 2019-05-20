@@ -4,6 +4,7 @@ import SnapKit
 
 class MapView: UIView, CLLocationManagerDelegate {
     private var mapView: MKMapView!
+    private var alertImageView: UIImageView!
     private var viewModel: MapViewModel
     private var shouldTrackUserLocation = true
     private var locationManager = CLLocationManager()
@@ -24,15 +25,20 @@ class MapView: UIView, CLLocationManagerDelegate {
         setupMapView()
         checkLocationServices()
         setupViewModel()
+        setupCreateAlertImageView()
     }
 
     func setupMapView() {
         mapView = MKMapView()
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(gestureRecognizer:)))
+        longPressGesture.minimumPressDuration = 0.4
+        mapView.addGestureRecognizer(longPressGesture)
         mapView.delegate = self
         mapView.isRotateEnabled = false
         addPanGestureRecognizerForMap()
         addSubview(mapView)
     }
+
     func addPanGestureRecognizerForMap() {
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didScrollMap))
         gestureRecognizer.delegate = self
@@ -91,6 +97,22 @@ class MapView: UIView, CLLocationManagerDelegate {
         viewModel.createMarkersForFriends(users: viewModel.users)
     }
 
+    private func setupCreateAlertImageView() {
+        let filledPickerImage = UIImage(named: "create-alert")
+        let notFilledPickerImage = UIImage(named: "cancel")
+        alertImageView = UIImageView(image: filledPickerImage, highlightedImage: notFilledPickerImage)
+        alertImageView.isHighlighted = viewModel.isMapInCreatingAlertMode
+        alertImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onCreateAlertTapped))
+        alertImageView.addGestureRecognizer(tapGesture)
+        addSubview(alertImageView)
+    }
+
+    @objc private func onCreateAlertTapped() {
+        viewModel.toggleButton()
+        alertImageView.isHighlighted = viewModel.isMapInCreatingAlertMode
+    }
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {
             return
@@ -106,6 +128,13 @@ class MapView: UIView, CLLocationManagerDelegate {
 
     private func applyConstraints() {
         mapView.fillParent()
+
+        alertImageView.snp.makeConstraints({
+            make in
+            make.right.equalToSuperview().inset(15.sketchHeight)
+            make.top.equalTo(self.snp_topMargin).inset(30.sketchHeight)
+            make.width.height.equalTo(45.sketchHeight)
+        })
     }
 
 }
@@ -117,11 +146,15 @@ extension MapView: MKMapViewDelegate {
     }
 
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let friendAnnotation = annotation as? FriendAnnotation else {
-            return nil
+        if let friendAnnotation = annotation as? FriendAnnotation {
+            let friendAnnotationView = FriendAnnotationView(annotation: annotation, reuseIdentifier: "", user: friendAnnotation.user)
+            return friendAnnotationView
         }
-        let friendAnnotationView = FriendAnnotationView(annotation: annotation, reuseIdentifier: "", user: friendAnnotation.user)
-        return friendAnnotationView
+        if let alertAnnotation = annotation as? AlertAnnotation {
+            let alertAnnotationView = AlertAnnotationView(annotation: annotation, reuseIdentifier: "", alert: alertAnnotation.alert)
+            return alertAnnotationView
+        }
+        return nil
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -131,10 +164,22 @@ extension MapView: MKMapViewDelegate {
         }
     }
 
+
 }
 
 extension MapView: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+
+    @objc func handleLongPress(gestureRecognizer: UILongPressGestureRecognizer) {
+        if !viewModel.isMapInCreatingAlertMode {
+            return
+        }
+        if gestureRecognizer.state == UIGestureRecognizer.State.ended {
+            let touchLocation = gestureRecognizer.location(in: mapView)
+            let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
+            viewModel.createAlert(locationCoordinate: locationCoordinate)
+        }
     }
 }

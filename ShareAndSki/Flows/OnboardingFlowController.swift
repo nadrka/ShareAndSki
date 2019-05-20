@@ -3,8 +3,8 @@ import UIKit
 class OnboardingFlowController: FlowController {
 
     private weak var rootNavigationController: UINavigationController?
-    var onUserAlreadyLoggedIn: (()->())? = nil
-    var onUserLoggedIn: (()->())? = nil
+    var onUserAlreadyLoggedIn: (() -> ())? = nil
+    var onUserLoggedIn: (() -> ())? = nil
 
     init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
@@ -29,7 +29,11 @@ class OnboardingFlowController: FlowController {
         phoneNumberViewModel.onDoneButtonTapped = {
             [weak self] phoneNumber in
             self?.showSmsCodeScreen(phoneNumber: phoneNumber)
+        }
 
+        phoneNumberViewModel.onUserAlreadyRegistered = {
+            [weak self] in
+            self?.onUserLoggedIn?()
         }
         rootNavigationController?.viewControllers = [phoneNumberViewController]
     }
