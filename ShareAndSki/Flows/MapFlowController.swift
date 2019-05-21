@@ -36,7 +36,7 @@ class MapFlowController: FlowController {
 
     private func bindGroupController() {
         mainTabBarController.groupsViewModel.onCreateButtonTapped = {
-            [weak self] in
+            [weak self]  in
             self?.showCreateGroupScreen()
         }
     }

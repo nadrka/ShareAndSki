@@ -4,9 +4,11 @@ import ObjectMapper
 enum Endpoints: String {
     case users = "users"
     case auth = "auth"
+    case groups = "groups"
     case usersFriends = "users/%@/friends"
     case knownUsers = "users/%@/knownUsers"
     case userPosition = "users/%@/position"
+    case userForGroup = "groups/%@/users"
 
     static func getFullUrl(endpoint: String) -> String {
         return BasicURL.basicURL.rawValue + endpoint

@@ -2,8 +2,6 @@ import UIKit
 
 class GroupTableViewController: UITableViewController {
 
-    let groups = [Group(name: "Grupa 1", friends: []), Group(name: "Grupa 2", friends: [])]
-//    let searchController = UISearchController(searchResultsController: nil)
     let viewModel: GroupViewModel
 
     required init?(coder aDecoder: NSCoder) {
@@ -18,7 +16,7 @@ class GroupTableViewController: UITableViewController {
     override func loadView() {
         super.loadView()
         setupTableView()
-        setupSearchBar()
+        bindViewModel()
     }
 
     private func setupTableView() {
@@ -27,19 +25,24 @@ class GroupTableViewController: UITableViewController {
         tableView.allowsSelection = false
     }
 
-    private func setupSearchBar() {
-//        navigationItem.searchController = searchController
-//        navigationItem.hidesSearchBarWhenScrolling = false
+    private func bindViewModel() {
+        viewModel.onListUpdated = {
+            self.tableView.reloadData()
+        }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchGroups()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return viewModel.groups.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.reuseId, for: indexPath) as! FriendTableViewCell
-        let group = groups[indexPath.row]
+        let group = viewModel.groups[indexPath.row]
         let cellViewModel = GroupCellViewModel(cellUsage: .friendsToShareLocation, group: group)
         cell.setup(cellViewModel)
         return cell

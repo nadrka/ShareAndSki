@@ -56,6 +56,7 @@ class FriendsViewModel {
                 self.checkIfUserMatchOurContacts(user: $0)
             }
             self.sendMyFriendsToServer()
+            FriendsRepository.sharedInstance.saveFriends(self.friendsFromApp)
             self.onListUpdated?()
         })
 
@@ -98,7 +99,7 @@ class FriendsViewModel {
             let endpoint = String(format: Endpoints.usersFriends.rawValue, arguments: [String(id)])
             let fid = FriendId(id: id)
             NetworkManager.sharedInstance.post(endpoint: Endpoints.getFullUrl(endpoint: endpoint), parameters: fid, onSuccess: {
-                [weak self] user in
+                user in
             }, onError: {
                 error in
             })
