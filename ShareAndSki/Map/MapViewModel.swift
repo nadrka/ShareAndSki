@@ -7,21 +7,19 @@ class MapViewModel {
     var timerForUpdatingPosition = Timer()
     var timerForFriendsPosition = Timer()
     var isMapInCreatingAlertMode = false
-    let users = [
-        User(nickname: "Dżasta", phoneNumber: "123213", longitude: 18.653242, latitude: 54.349822),
-        User(nickname: "Braniak", phoneNumber: "123123", longitude: 18.653394, latitude: 54.348850),
-        User(nickname: "Julian", phoneNumber: "12312", longitude: 18.653216, latitude: 54.348628)
-    ]
+    var users = [User]()
 
     var alerts = [Alert]()
 
-    let friendsAnnotations = [FriendAnnotation]()
+    var friendsAnnotations = [FriendAnnotation]()
 
     func setupMapView(_ mapView: MKMapView) {
         self.mapView = mapView
     }
 
     func scheduleMyLocationTimer() {
+        updateMyPosition()
+        checkFriendLocation()
         timerForUpdatingPosition = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(updateMyPosition), userInfo: nil, repeats: true)
     }
 
@@ -39,23 +37,30 @@ class MapViewModel {
     @objc private func checkFriendLocation() {
         locationUpdater.checkForLocationFromFriends {
             users in
-            self.mapView.removeAnnotations(self.mapView.annotations)
+            self.users = users
             self.createMarkersForFriends(users: users)
+            self.checkIfSomeFriendAreNearToAlert()
         }
     }
 
     func createMarkersForFriends(users: [User]) {
-        self.mapView.removeAnnotations(self.mapView.annotations)
+        mapView.removeAnnotations(friendsAnnotations)
+        friendsAnnotations.removeAll()
         users.forEach {
             let friendMarker = FriendAnnotation(user: $0)
             mapView.addAnnotation(friendMarker)
+            friendsAnnotations.append(friendMarker)
         }
         mapView.showAnnotations(mapView.annotations, animated: true)
     }
 
 
     func showFriendOnMap(user: User) {
-        //todo: move map to a friend location
+        if let friendAnnotation = friendsAnnotations.first(where: {
+            $0.user.id == user.id
+        }) {
+            mapView.showAnnotations([friendAnnotation], animated: true)
+        }
     }
 
     func toggleButton() {
@@ -70,10 +75,25 @@ class MapViewModel {
     }
 
     private func checkIfSomeFriendAreNearToAlert() {
-
+        users.forEach({
+            let user = $0
+            if alerts.contains(where: {
+                isDistanceBetweenFriendAndAlertLessThan50(user: user, alert: $0)
+            }) {
+                notifyThatSomeFriendIsNearToAlert(user)
+            }
+        })
     }
 
-    private func notifyThatSomeFriendIsNearToAlert() {
+    private func isDistanceBetweenFriendAndAlertLessThan50(user: User, alert: Alert) -> Bool {
+        let maxDistance = 50.0
+        let alertLocation = CLLocation(latitude: alert.latitude, longitude: alert.longitude)
+        let userLocation = CLLocation(latitude: user.latitude, longitude: user.longitude)
+        let distance = userLocation.distance(from: alertLocation)
+        return distance < maxDistance
+    }
 
+    private func notifyThatSomeFriendIsNearToAlert(_ user: User) {
+        log.debug("\(user.nickname) is in range of the alert!")
     }
 }

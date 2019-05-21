@@ -66,7 +66,7 @@ class DefaultFriendCellViewModel: FriendCellViewModel {
     }
 
     var name: String {
-        return friend.nameFromContactList
+        return friend.nameFromContactList != "" ? friend.nameFromContactList : friend.nickname
     }
 
     var distance: String {

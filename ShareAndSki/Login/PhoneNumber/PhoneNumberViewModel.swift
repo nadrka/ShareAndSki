@@ -16,8 +16,7 @@ class PhoneNumberViewModel {
     }
 
     private func getUser(phoneNumber: String) {
-        if let id = userRepository.userWithToken?.user.id {
-            let endpoint = String(format: Endpoints.users.rawValue, arguments: [id])
+            let endpoint = String(format: Endpoints.users.rawValue, arguments: [""])
             networkManager.getArray(endpoint: Endpoints.getFullUrl(endpoint: endpoint), parameters: nil, onSuccess: {
                 response in
                 if let users: [User] = self.networkManager.mapResponseArray(response) {
@@ -32,7 +31,6 @@ class PhoneNumberViewModel {
                 error in
                 self.onDoneButtonTapped?(phoneNumber)
             })
-        }
     }
 
     private func checkIfUserAlreadyExist(users: [User], phoneNumber: String) -> Bool {

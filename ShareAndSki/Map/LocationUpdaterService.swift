@@ -14,6 +14,7 @@ class LocationUpdaterService {
                         [weak self] response in
                         if let users: [User] = self?.networkManager.mapResponseArray(response) {
                             completionHandler(users)
+                            self?.onFriendLocationChanged?(users)
                         }
                     }, onError: {
                         error in

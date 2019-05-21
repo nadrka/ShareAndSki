@@ -77,4 +77,10 @@ extension SharingFriendsView: UITableViewDelegate, UITableViewDataSource {
         cell.setup(cellViewModel)
         return cell
     }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let friend = viewModel.getFriendThatSharesLocation(with: indexPath.row)
+        viewModel.onChosenFriend?(friend)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

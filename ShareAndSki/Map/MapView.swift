@@ -179,6 +179,7 @@ extension MapView: UIGestureRecognizerDelegate {
         if gestureRecognizer.state == UIGestureRecognizer.State.ended {
             let touchLocation = gestureRecognizer.location(in: mapView)
             let locationCoordinate = mapView.convert(touchLocation, toCoordinateFrom: mapView)
+            log.verbose("Add alert")
             viewModel.createAlert(locationCoordinate: locationCoordinate)
         }
     }

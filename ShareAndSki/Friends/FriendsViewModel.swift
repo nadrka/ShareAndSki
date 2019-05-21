@@ -55,23 +55,23 @@ class FriendsViewModel {
             users.forEach {
                 self.checkIfUserMatchOurContacts(user: $0)
             }
+            self.sendMyFriendsToServer()
             self.onListUpdated?()
         })
 
-        sendMyFriendsToServer()
     }
 
     private func getUsers(completionHandler: @escaping (([User]) -> ())) {
         if let id = userRepository.userWithToken?.user.id {
             let endpoint = String(format: Endpoints.users.rawValue, arguments: [id])
             networkManager.getArray(endpoint: Endpoints.getFullUrl(endpoint: endpoint), parameters: nil, onSuccess: {
-                        [weak self] response in
-                        if let users: [User] = self?.networkManager.mapResponseArray(response) {
-                            completionHandler(users)
-                        }
-                    }, onError: {
-                        error in
-                    })
+                [weak self] response in
+                if let users: [User] = self?.networkManager.mapResponseArray(response) {
+                    completionHandler(users)
+                }
+            }, onError: {
+                error in
+            })
         }
     }
 
@@ -95,7 +95,7 @@ class FriendsViewModel {
 
     private func sendFriend(friendId: Int) {
         if let id = userRepository.userWithToken?.user.id {
-            let endpoint = String(format: Endpoints.usersFriends.rawValue, arguments: [id])
+            let endpoint = String(format: Endpoints.usersFriends.rawValue, arguments: [String(id)])
             let fid = FriendId(id: id)
             NetworkManager.sharedInstance.post(endpoint: Endpoints.getFullUrl(endpoint: endpoint), parameters: fid, onSuccess: {
                 [weak self] user in
